@@ -20,13 +20,13 @@ public class Comentario  implements java.io.Serializable {
 
     public Comentario() {
     }
-
-	
+    
     public Comentario(int idcomentario, Marcador marcador, Usuario usuario, String descripcion) {
         this.idcomentario = idcomentario;
         this.marcador = marcador;
         this.usuario = usuario;
         this.descripcion = descripcion;
+        this.calificacion = 0;
     }
     public Comentario(int idcomentario, Marcador marcador, Usuario usuario, Integer calificacion, String descripcion, Set megustas) {
        this.idcomentario = idcomentario;
@@ -79,10 +79,6 @@ public class Comentario  implements java.io.Serializable {
     public void setMegustas(Set megustas) {
         this.megustas = megustas;
     }
-
-
-
-
 }
 
 
