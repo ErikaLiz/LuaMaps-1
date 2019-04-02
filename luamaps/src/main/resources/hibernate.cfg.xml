@@ -44,8 +44,8 @@ Contributor(s):
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/luamaps</property>
-    <property name="hibernate.connection.username">lua</property>
-    <property name="hibernate.connection.password">lua</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">Chicharo16</property>
     <mapping resource="com/mycompany/luamaps/Usuario.hbm.xml"/>
     <mapping resource="com/mycompany/luamaps/Tema.hbm.xml"/>
     <mapping resource="com/mycompany/luamaps/Comentario.hbm.xml"/>
