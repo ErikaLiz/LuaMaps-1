@@ -44,7 +44,5 @@ public class CrearTema{
         t.setColor(color);
         TemaDAO tdao = new TemaDAO();
         tdao.save(t);
-        
     }
-    
 }

@@ -7,6 +7,10 @@ package com.mycompany.luamaps.controlador;
 
 import com.mycompany.luamaps.modelo.Comentario;
 import com.mycompany.luamaps.modelo.ComentarioDAO;
+import com.mycompany.luamaps.modelo.Marcador;
+import com.mycompany.luamaps.modelo.MarcadorDAO;
+import com.mycompany.luamaps.modelo.Usuario;
+import com.mycompany.luamaps.modelo.UsuarioDAO;
 import javax.faces.bean.ManagedBean;
 
 /**
@@ -16,7 +20,11 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 public class AgregaComentario {
     private String content;
+    private Usuario usuario;
+    private Marcador marcador;
+    private int calificacion;
     
+
     public void setContent(String content) {
         this.content = content;
     }
@@ -25,9 +33,10 @@ public class AgregaComentario {
         return content;
     }
     
-    /*public void agregaComment() {
-        Comentario c = new Comentario(content);
-        ComentarioDAO cdao = new ComentarioDAO();
-        cdao.save(c);
-    }*/
+    public void agregaComentarioDummies() {
+        Usuario u = new UsuarioDAO().find("dummy@dummy.com");
+        Marcador m = new MarcadorDAO().find(1);
+        Comentario c = new Comentario(m, u, content);
+        new ComentarioDAO().save(c);
+    }
 }

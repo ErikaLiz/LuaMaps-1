@@ -10,6 +10,9 @@ package com.mycompany.luamaps.modelo;
  * @author larachicharo
  */
 public class ComentarioDAO extends AbstractDAO<Comentario> {
+    public ComentarioDAO(){
+         super();    
+    }
     public void save(Comentario c) {
         super.save(c);
     }

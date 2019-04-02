@@ -25,7 +25,7 @@ import org.hibernate.Transaction;
 public abstract class AbstractDAO<T> {
  protected SessionFactory sessionFactory;   
  
- public  AbstractDAO() {
+ public AbstractDAO() {
      this.sessionFactory = HibernateUtil.getSessionFactory();
  }
  
@@ -82,7 +82,7 @@ public abstract class AbstractDAO<T> {
  
  protected T find(Class c, int id) {
      T obj = null;
-     Session session = this.sessionFactory.getCurrentSession();
+     Session session = this.sessionFactory.openSession();
      Transaction tx = null;
      try {
          tx = session.beginTransaction();
