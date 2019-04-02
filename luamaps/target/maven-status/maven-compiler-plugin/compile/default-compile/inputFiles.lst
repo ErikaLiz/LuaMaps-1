@@ -1,0 +1,12 @@
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/controlador/AgregarInformante.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/controlador/CrearTema.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/AbstractDAO.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/UsuarioDAO.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Usuario.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Tema.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Comentario.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Marcador.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/HibernateUtil.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/TemaDAO.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Megusta.java
+/home/marco/Escritorio/Proyecto/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/MarcadorDAO.java

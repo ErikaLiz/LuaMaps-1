@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31/03/2019 03:36:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.mycompany.luamaps.modelo.Usuario" optimistic-lock="version" schema="public" table="usuario">
+    <id name="correo" type="string">
+      <column length="40" name="correo"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="activo" type="java.lang.Boolean">
+      <column name="activo"/>
+    </property>
+    <property name="nombreusuario" type="string">
+      <column length="50" name="nombreusuario" not-null="true"/>
+    </property>
+    <property name="rol" type="int">
+      <column name="rol" not-null="true"/>
+    </property>
+    <property name="contrasenia" type="string">
+      <column length="10" name="contrasenia" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="temas" table="tema">
+      <key>
+        <column length="40" name="correo" not-null="true"/>
+      </key>
+      <one-to-many class="com.mycompany.luamaps.modelo.Tema"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="comentarios" table="comentario">
+      <key>
+        <column length="40" name="correo" not-null="true"/>
+      </key>
+      <one-to-many class="com.mycompany.luamaps.modelo.Comentario"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="megustas" table="megusta">
+      <key>
+        <column length="40" name="correo" not-null="true"/>
+      </key>
+      <one-to-many class="com.mycompany.luamaps.modelo.Megusta"/>
+    </set>
+  </class>
+</hibernate-mapping>

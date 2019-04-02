@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31/03/2019 03:36:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.mycompany.luamaps.modelo.Tema" optimistic-lock="version" schema="public" table="tema">
+    <id name="idtema" type="int">
+      <column name="idtema"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.mycompany.luamaps.modelo.Usuario" fetch="select" name="usuario">
+      <column length="40" name="correo" not-null="true"/>
+    </many-to-one>
+    <property name="nombretema" type="string">
+      <column length="60" name="nombretema" not-null="true"/>
+    </property>
+    <property name="color" type="string">
+      <column length="10" name="color" not-null="true" unique="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="marcadors" table="marcador">
+      <key>
+        <column name="idtema" not-null="true"/>
+      </key>
+      <one-to-many class="com.mycompany.luamaps.modelo.Marcador"/>
+    </set>
+  </class>
+</hibernate-mapping>

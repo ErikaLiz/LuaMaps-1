@@ -1,0 +1,12 @@
+com/mycompany/luamaps/modelo/Marcador.class
+com/mycompany/luamaps/controlador/CrearTema.class
+com/mycompany/luamaps/modelo/AbstractDAO.class
+com/mycompany/luamaps/modelo/UsuarioDAO.class
+com/mycompany/luamaps/controlador/AgregarInformante.class
+com/mycompany/luamaps/modelo/HibernateUtil.class
+com/mycompany/luamaps/modelo/Usuario.class
+com/mycompany/luamaps/modelo/TemaDAO.class
+com/mycompany/luamaps/modelo/Comentario.class
+com/mycompany/luamaps/modelo/Megusta.class
+com/mycompany/luamaps/modelo/MarcadorDAO.class
+com/mycompany/luamaps/modelo/Tema.class

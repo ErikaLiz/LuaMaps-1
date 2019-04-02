@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31/03/2019 03:36:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.mycompany.luamaps.modelo.Comentario" optimistic-lock="version" schema="public" table="comentario">
+    <id name="idcomentario" type="int">
+      <column name="idcomentario"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.mycompany.luamaps.modelo.Marcador" fetch="select" name="marcador">
+      <column name="idmarcador" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.mycompany.luamaps.modelo.Usuario" fetch="select" name="usuario">
+      <column length="40" name="correo" not-null="true"/>
+    </many-to-one>
+    <property name="calificacion" type="java.lang.Integer">
+      <column name="calificacion"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="100" name="descripcion" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="megustas" table="megusta">
+      <key>
+        <column name="idcomentario" not-null="true"/>
+      </key>
+      <one-to-many class="com.mycompany.luamaps.modelo.Megusta"/>
+    </set>
+  </class>
+</hibernate-mapping>
