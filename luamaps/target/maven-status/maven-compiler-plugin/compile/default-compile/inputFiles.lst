@@ -3,6 +3,7 @@
 /home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/UsuarioDAO.java
 /home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/controlador/AgregaComentario.java
 /home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/controlador/CrearTema.java
+/home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/controlador/MarcadorActual.java
 /home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Comentario.java
 /home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Marcador.java
 /home/larachicharo/Documents/Uni/Ing/NetbeansProjects/LuaMaps/luamaps/src/main/java/com/mycompany/luamaps/modelo/Megusta.java

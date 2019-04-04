@@ -5,4 +5,10 @@ INSERT INTO tema (nombretema, color, correo)
 VALUES ('dummytema', 'azul', 'dummy@dummy.com');
 
 INSERT INTO marcador (descripcion, latitud, longitud, idtema)
-VALUES ('Marcador dummy', 59.89, 30.26, 1);
+VALUES ('St. Petersburg', 59.89, 30.26, 1);
+
+INSERT INTO marcador (descripcion, latitud, longitud, idtema)
+VALUES ('Moscow', 55.75, 37.61, 1);
+
+INSERT INTO marcador (descripcion, latitud, longitud, idtema)
+VALUES ('Krasnodar', 45.03, 38.98, 1);

@@ -9,6 +9,7 @@ com/mycompany/luamaps/modelo/Usuario.class
 com/mycompany/luamaps/modelo/TemaDAO.class
 com/mycompany/luamaps/modelo/Comentario.class
 com/mycompany/luamaps/modelo/Megusta.class
+com/mycompany/luamaps/controlador/MarcadorActual.class
 com/mycompany/luamaps/modelo/ComentarioDAO.class
 com/mycompany/luamaps/modelo/MarcadorDAO.class
 com/mycompany/luamaps/modelo/Tema.class
