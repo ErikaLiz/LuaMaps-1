@@ -14,12 +14,14 @@ import java.util.List;
 
 public class TemaDAO extends AbstractDAO<Tema>{
     
-   public TemaDAO(){
+    public TemaDAO(){
         super();
     }
-     /**
+    
+    
+    /**
      * 
-     * @param tema 
+     * @param  
      */
     @Override
     public void save(Tema tema){
@@ -28,28 +30,33 @@ public class TemaDAO extends AbstractDAO<Tema>{
     
     /**
      * 
-     * @param tema 
+     * @param marcador 
      */
     @Override
-    public  void update(Tema tema){
-        super.update(tema);
+    public void update(Tema tema){
+        super.save(tema);
     }
     
     /**
      * 
-     * @param tema 
+     * @param marcador 
      */
     @Override
     public void delete(Tema tema){
         super.delete(tema);
     }
-    
+       
     /**
      * 
      * @param id
      * @return 
      */
     public Tema find(int id){
+        return super.find(Tema.class, id);
+    }
+
+    
+    public Tema findS(String id){
         return super.find(Tema.class, id);
     }
     

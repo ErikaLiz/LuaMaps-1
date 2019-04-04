@@ -5,7 +5,7 @@
   <class name="com.mycompany.luamaps.modelo.Tema" optimistic-lock="version" schema="public" table="tema">
     <id name="idtema" type="int">
       <column name="idtema"/>
-      <generator class="assigned"/>
+      <generator class="identity"/>
     </id>
     <many-to-one class="com.mycompany.luamaps.modelo.Usuario" fetch="select" name="usuario">
       <column length="40" name="correo" not-null="true"/>

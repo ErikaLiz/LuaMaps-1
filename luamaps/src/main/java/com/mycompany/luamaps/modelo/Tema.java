@@ -70,6 +70,10 @@ public class Tema  implements java.io.Serializable {
     public void setMarcadors(Set marcadors) {
         this.marcadors = marcadors;
     }
+    
+    public void addMarcador (Marcador m) {
+        marcadors.add(m);
+    }
 
 
 

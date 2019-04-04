@@ -3,27 +3,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Agrega Informantes</title>
+        <title>Agrega Tema</title>
     </h:head>
     <h:body>
         <div>
-            <h1> Agrega Informante</h1>
+            <h1> Agrega Tema</h1>
             
         </div>
         <div id="contenedor_principal">
              
             <h:form>
-               nombreTema:
-              <h:inputText id="nombreTema" value="#{crearTema.nombreTema}" label="nombreTema" maxlength="50"            
+               Nombre del Tema:
+              <h:inputText id="nombreTema" value="#{crearTema.nombre}" label="nombreTema" maxlength="50"            
                 size="155" required="true"              
                 requiredMessage="Campo obligatorio">  
               </h:inputText>
-               Color:
-               <h:inputText id="color" value="#{crearTema.color}" label="color" maxlength="40"            
-                size="15" required="true"              
+                Color:
+              <h:inputText id="Color" value="#{crearTema.color}" label="color" maxlength="50"            
+                size="155" required="true"              
                 requiredMessage="Campo obligatorio">  
               </h:inputText>
-                <h:commandButton id="submit-button" value="Crear" action="#{crearTema.crearTema()}"/>  
+   
+                <h:commandButton id="submit-button" value="Crear" action="#{crearTema.agregraTema()}"/>  
             </h:form>
         </div>
         

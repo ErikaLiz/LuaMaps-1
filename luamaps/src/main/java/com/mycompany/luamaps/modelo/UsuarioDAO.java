@@ -5,6 +5,7 @@
  */
 package com.mycompany.luamaps.modelo;
 
+import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -15,7 +16,7 @@ import org.hibernate.Transaction;
  * @author marco
  */
 public class UsuarioDAO extends AbstractDAO<Usuario> {
-    public UsuarioDAO(){
+public UsuarioDAO(){
          super();    
     }
     
@@ -27,30 +28,62 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
         super.update(u);
     }
     
-    /*public Usuario find(String email) {
-        return super.findByEmail(Usuario.class, email);
-    }*/
+     /**
+     * 
+     * @return 
+     */
+    public List<Usuario> findAll(){
+        return super.findAll(Usuario.class);
+    }
     
-    public Usuario find(String email){
-        Usuario us = null;
+    
+    public Usuario find(String correo){
+        Usuario u = null;
         Session session = this.sessionFactory.openSession();
         Transaction tx = null;
-        try {
+        try{
             tx = session.beginTransaction();
-            String hql = "From Usuario u where u.correo= :email";
+            String hql = "from Usuario where correo = :correo ";
             Query query = session.createQuery(hql);
-            query.setParameter("email", email);
-            us = (Usuario)query.uniqueResult();
+            query.setParameter("correo", correo);
+            u = (Usuario)query.uniqueResult();
             tx.commit();
-        } catch(HibernateException e) {
+            
+        }catch(HibernateException e){
             if(tx!=null){
                 tx.rollback();
             }
             e.printStackTrace();
-        } finally {
+
+        }finally{
             session.close();
         }
-        return us;
+        return u;
+        
     }
+    
+    public List<Usuario> ListaXRol(Integer rol){
+        List<Usuario> u = null;
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
+        try{
+            tx = session.beginTransaction();
+            String hql = "from Usuario  where rol = :rol ";
+            Query query = session.createQuery(hql);
+            query.setParameter("rol", rol);
+            u = (List<Usuario>)query.list();
+            tx.commit();
+            
+        }catch(HibernateException e){
+            if(tx!=null){
+                tx.rollback();
+            }
+            e.printStackTrace();
+
+        }finally{
+            session.close();
+        }
+            return u;
+     }
     
 }
