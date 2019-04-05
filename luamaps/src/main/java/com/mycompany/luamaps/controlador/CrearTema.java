@@ -41,7 +41,7 @@ public class CrearTema{
     public void crearTema(){
         Tema t = new Tema();
         t.setNombretema(nombreTema);
-        t.setColor(color);
+        // t.setColor(color); DEPRECADO
         TemaDAO tdao = new TemaDAO();
         tdao.save(t);
     }

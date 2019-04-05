@@ -5,8 +5,10 @@
  */
 package com.mycompany.luamaps.controlador;
 
+import com.mycompany.luamaps.modelo.Comentario;
 import com.mycompany.luamaps.modelo.Marcador;
 import com.mycompany.luamaps.modelo.MarcadorDAO;
+import java.util.Set;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -19,15 +21,27 @@ import javax.faces.bean.SessionScoped;
 public class MarcadorActual {
     private Marcador marcadorActual;
     private int idmarcador;
+    Set<Comentario> comentarios;
     
     public void changeMarcadorActual(int marcadorid) {
+        System.out.println("Marcador id: " + String.valueOf(marcadorid));
         MarcadorDAO mdao = new MarcadorDAO();
         Marcador marcadorFind = mdao.find(marcadorid);
+        AgregaComentario ac = new AgregaComentario();
+        ac.setIdmarcador(idmarcador);
         marcadorActual = marcadorFind;
     }
     
     public String getDescripcion() {
         return marcadorActual.getDescripcion();
+    }
+    
+    public void setComentarios() {
+        this.comentarios = marcadorActual.getComentarios();
+    }
+    
+    public Set<Comentario> getComentarios() {
+        return this.comentarios;
     }
     
     public int getIdmarcador() {
@@ -40,7 +54,7 @@ public class MarcadorActual {
     
     public String irAMarcador() {
         changeMarcadorActual(idmarcador);
+        setComentarios();
         return "Marcador?faces-redirect=true";
     }
-    
 }

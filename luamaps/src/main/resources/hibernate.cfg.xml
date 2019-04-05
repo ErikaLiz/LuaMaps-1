@@ -45,11 +45,13 @@ Contributor(s):
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/luamaps</property>
     <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">Chicharo16</property>
-    <mapping resource="com/mycompany/luamaps/Usuario.hbm.xml"/>
-    <mapping resource="com/mycompany/luamaps/Tema.hbm.xml"/>
-    <mapping resource="com/mycompany/luamaps/Comentario.hbm.xml"/>
-    <mapping resource="com/mycompany/luamaps/Megusta.hbm.xml"/>
-    <mapping resource="com/mycompany/luamaps/Marcador.hbm.xml"/>
+    <property name="hibernate.connection.password">cambiar</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <mapping resource="com/mycompany/luamaps/modelo/Comentario.hbm.xml"/>
+    <mapping resource="com/mycompany/luamaps/modelo/Tema.hbm.xml"/>
+    <mapping resource="com/mycompany/luamaps/modelo/Megusta.hbm.xml"/>
+    <mapping resource="com/mycompany/luamaps/modelo/Marcador.hbm.xml"/>
+    <mapping resource="com/mycompany/luamaps/modelo/Usuario.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

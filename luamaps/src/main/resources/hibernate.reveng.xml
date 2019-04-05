@@ -41,9 +41,9 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="luamaps" match-schema="public"/>
-  <table-filter match-name="tema"/>
-  <table-filter match-name="comentario"/>
   <table-filter match-name="megusta"/>
-  <table-filter match-name="usuario"/>
+  <table-filter match-name="tema"/>
   <table-filter match-name="marcador"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="comentario"/>
 </hibernate-reverse-engineering>
