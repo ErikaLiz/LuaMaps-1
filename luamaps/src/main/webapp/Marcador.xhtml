@@ -22,7 +22,7 @@
             <h:commandButton id="submit-button" value="Crear" action="#{agregaComentario.agregaComentarioUsuarioDummy()}"/>  
         </h:form>
         
-        <p:dataList value="#{marcadorActual.comentarios}" var="comentario">
+        <p:dataList value="#{marcadorActual.comentarios}" var="comentario" type="ordered">
 
                 #{comentario.descripcion}<br/>
         </p:dataList>

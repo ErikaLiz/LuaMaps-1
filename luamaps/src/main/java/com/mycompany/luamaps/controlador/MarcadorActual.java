@@ -36,7 +36,7 @@ public class MarcadorActual {
         return marcadorActual.getDescripcion();
     }
     
-    public void setComentarios() {
+    public void updateComentarios() {
         this.comentarios = marcadorActual.getComentarios();
     }
     
@@ -54,7 +54,7 @@ public class MarcadorActual {
     
     public String irAMarcador() {
         changeMarcadorActual(idmarcador);
-        setComentarios();
+        updateComentarios();
         return "Marcador?faces-redirect=true";
     }
 }
